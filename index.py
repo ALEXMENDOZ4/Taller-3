@@ -156,3 +156,28 @@ def ejercicio5():
 
 
 ejercicio5()
+
+
+def ejercicio6():
+    x = 0
+    n = 0
+    pesoA = 0
+    peso = 0
+    suma = 0
+
+    for n in range(n,5):
+        print("\npersona", n+1)
+        pesoA = int(input("ingresa tu peso anterior\n"))
+
+        for x in range(x,10):
+            peso = int(input(f'ingresa el peso {x+1} : ' ))
+            suma = suma + peso
+        if(suma / 10 == pesoA):
+            print("la personas",x, "se mantiene en el peso")
+        elif(suma / 10 > pesoA):
+            print("la persona",n+1,"subio")
+        else:            
+            print("la persona",n+1,"bajo") 
+        x = 0       
+
+ejercicio6()
