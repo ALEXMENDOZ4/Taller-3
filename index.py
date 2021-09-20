@@ -106,3 +106,36 @@ def ejercicio3():
       x+=1     
 
 ejercicio3()
+
+
+def ejercicio4():
+    n = int(input("ingrese el numero de alumnos de todo el grupo\n"))
+    x = 1
+    mujeres = 0
+    hombres = 0
+    edadMujer = 0
+    edadHombre = 0
+
+    while(x <= n):
+        print("Escribe un numero de acuerdo a tu sexo:")
+        print("1 = mujer")
+        print("2 = hombre")
+        sexo = int(input("escoga una opcion: "))
+        edad = int(input("escribe tu edad: "))
+
+        if(sexo == 1):
+            edadMujer = edadMujer + edad
+            mujeres+=1
+            promedioM = edadMujer / mujeres
+        else:
+            edadHombre = edadHombre + edad
+            hombres+=1
+            promedioH = edadHombre / hombres    
+
+        x+=1
+    print("el promedio de todo el grupo es:", (edadMujer + edadHombre) / n ,"años")
+    print("el promedio de edades de mujeres de todo el grupo es: ",promedioM ,"años")
+    print("el promedio de edades de hombres de todo el grupo es: ",promedioH ,"años")
+
+
+ejercicio4()
