@@ -121,7 +121,7 @@ def ejercicio4():
     edadHombre = 0
 
     while(x <= n):
-        print("Escribe un numero de acuerdo a tu sexo:")
+        print("Escribe un numero de acuerdo a su sexo:")
         print("1 = mujer")
         print("2 = hombre")
         sexo = int(input("escoga una opcion: "))
