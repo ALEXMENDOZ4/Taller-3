@@ -1,3 +1,7 @@
+from numpy.random import randint
+import numpy as np
+
+
 def ejercicio1():
     n = int(input("digite la cantidad de autos\n"))
     i = 1
@@ -287,3 +291,27 @@ def ejercicio9():
 
 
 ejercicio9()
+
+
+
+def ejercicio10():
+  values = randint(0, 3, 50000)
+  count_arr = np.bincount(values)
+  can1 = (count_arr[0])
+  can2 = (count_arr[1])
+  can3 = (count_arr[2])
+  
+  if can1 > can2 and can1 > can3 : winname ="Canditato #1"
+  if can2 > can1 and can2 > can3 : winname ="Candidato #2"
+  if can3 > can1 and can3 > can2 : winname ="Candidato #3"
+  
+  winnum=max(can1, can2, can3)
+  
+  print(can1)
+  print(can2)
+  print(can3)
+  print(f"el ganador es "+winname+" con "+str(winnum)+" votos")
+
+
+
+ejercicio10()
