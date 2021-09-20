@@ -34,3 +34,51 @@ def ejercicio1():
             
 
 ejercicio1()
+
+
+def ejercicio2():
+    i = 1
+    n = 0
+    total = 0
+    edad = 0
+    categoria1 = 0
+    categoria2 = 0
+    categoria3 = 0
+    animal = ""
+
+    print("selecciona un animal")
+    print("1 = elefante\n")
+    print("2 = jirafas\n")
+    print("3 = chimpances\n")
+    n = int(input("escoga una opcion\n"))
+
+    if(n > 1 and n < 4):
+        if(n == 1):
+            animal = "elefante"
+            total = 20
+        elif(n == 2):
+               animal = "jirafas"
+               total = 15
+        elif(n == 3):
+               animal = "chimpances"
+               total = 40        
+
+    for i in range(0,total):
+        
+      edad = int(input(f"{i+1}. ingresa la edad: "))
+      
+
+      if(edad >= 0 and edad <= 1):
+       categoria1+=1
+      elif(edad < 3):
+       categoria2+=1
+      elif(edad >= 3):
+       categoria3+=1             
+
+    print("porcentaje de edades de ", animal)
+    print((categoria1/total)*100,"% de 0 a 1 año")
+    print((categoria2/total)*100,"% de mas de 1 año y menos de 3")
+    print((categoria3/total)*100,"% de 3 años o mas")
+
+
+ejercicio2()
