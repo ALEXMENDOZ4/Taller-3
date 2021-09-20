@@ -139,3 +139,20 @@ def ejercicio4():
 
 
 ejercicio4()
+
+
+def ejercicio5():
+    n = int(input("escribe el total de numeros a calcular\n"))
+    x = 1
+    while(x <= n):
+       numero = int(input("escriba un numero\n"))
+       if(x == 1):
+           menor = numero
+       else:
+           if(numero < menor):
+               menor = numero
+       x+=1
+    print("el numero menor es: ", menor)    
+
+
+ejercicio5()
