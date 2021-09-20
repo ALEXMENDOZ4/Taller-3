@@ -202,3 +202,58 @@ def ejercicio7():
         
 
 ejercicio7()
+
+
+def ejercicio8():
+    edad = 0
+    res = 0
+    categoria1 = 0
+    categoria2 = 0
+    categoria3 = 0
+    categoria4 = 0
+    categoria5 = 0
+    total = 0
+
+    precio = int(input("ingresa el precio del boleto: "))
+
+    while(True):
+
+        edad = int(input("ingresa la edad: "))
+
+        if(edad < 5):
+            print("no se permiten menores de 5 años")
+        elif(edad <= 14):
+            descuento = (precio * 0.35)
+            categoria1 = categoria1 + descuento
+        elif(edad <= 19):
+            descuento = (precio * 0.25)
+            categoria2 = categoria2 + descuento
+        elif(edad <= 45):
+            descuento = (precio * 0.10)
+            categoria3 = categoria3 + descuento
+        elif(edad <= 65):
+            descuento = (precio * 0.25)
+            categoria4 = categoria4 + descuento
+        else:
+            descuento = (precio * 0.35)
+            categoria5 = categoria5 + descuento
+        
+        total = total + descuento
+
+        print("el descuento aplicado es: ", descuento)
+
+        res = int(input("desea continuar? 1.si 2.no: "))                        
+
+        if(res != 1):
+          break 
+
+    print("el descuento total en la categoria 1 es:", categoria1)
+    print("el descuento total en la categoria 2 es:", categoria2)
+    print("el descuento total en la categoria 3 es:", categoria3)
+    print("el descuento total en la categoria 4 es:", categoria4)
+    print("el descuento total en la categoria 5 es:", categoria5)
+
+    print("el descuento total es: $", total)      
+
+
+ejercicio8()
